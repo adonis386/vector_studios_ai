@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
   }
   body {
     @apply min-h-[max(884px,100dvh)] bg-background text-on-background antialiased;
@@ -13,26 +14,26 @@
 
 @layer components {
   .glass-nav {
-    background: rgba(5, 5, 5, 0.72);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #e2e8f0;
   }
   .voice-wave {
     background: radial-gradient(
       circle at center,
-      rgba(29, 58, 44, 0.45) 0%,
-      rgba(10, 31, 68, 0.25) 50%,
-      transparent 100%
+      rgba(29, 58, 44, 0.12) 0%,
+      rgba(10, 31, 68, 0.06) 45%,
+      transparent 70%
     );
   }
   .featured-glow {
-    box-shadow: 0 0 30px rgba(29, 58, 44, 0.25);
-    border-color: rgba(173, 206, 186, 0.45) !important;
+    box-shadow: 0 4px 20px rgba(10, 31, 68, 0.04);
+    border-color: rgba(29, 58, 44, 0.22) !important;
   }
   .grid-lines {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(26, 26, 26, 0.5) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(226, 232, 240, 0.9) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(226, 232, 240, 0.9) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }

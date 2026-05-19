@@ -10,14 +10,14 @@ import VectorStudioBackground from "./components/VectorStudioBackground.jsx";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-background font-body-md selection:bg-primary selection:text-on-primary">
+    <div className="relative min-h-screen bg-background font-body-md text-on-background selection:bg-primary-fixed selection:text-primary">
       <VectorStudioBackground />
       <div className="relative z-[1]">
         <Header />
         <main id="inicio">
           <Hero />
-          <EfectoVoz />
           <Servicios />
+          <EfectoVoz />
           <DiferenciaVector />
           <Precios />
           <Contacto />

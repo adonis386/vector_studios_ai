@@ -1,37 +1,43 @@
-import { Blocks, Bot, Gauge, Smartphone } from "lucide-react";
+import { Bot, Layout, Plug, Smartphone } from "lucide-react";
 
-/** Nuestros Servicios — orden fijo 1–4 */
+/** Servicios — desarrollo primero, IA como capa */
+export const serviciosIntro = {
+  eyebrow: "Qué construimos",
+  titulo: "Producto digital + inteligencia artificial",
+  lead: "Cuatro líneas de trabajo con un solo socio técnico: desde la app en el bolsillo del cliente hasta el agente que cierra ventas a las 3 de la mañana.",
+};
+
 export const serviciosItems = [
   {
-    id: "web",
+    id: "apps",
     orden: 1,
-    Icon: Gauge,
-    titulo: "Ecosistemas Web de Alta Velocidad",
+    Icon: Smartphone,
+    titulo: "Aplicaciones móviles",
     texto:
-      "Desarrollamos plataformas digitales pensadas para cargar al instante y escalar con tu negocio — sobre infraestructura de carga instantánea y máxima seguridad. No es solo un sitio web: es el centro de control de tu operación, seguro, rápido y optimizado para convertir visitantes en clientes.",
+      "Apps para tus clientes o para tu equipo interno: reservas, pedidos, seguimiento y notificaciones. Sincronización en tiempo real con tu base de datos y panel de administración cuando lo necesites.",
   },
   {
-    id: "apps",
+    id: "web",
     orden: 2,
-    Icon: Smartphone,
-    titulo: "Aplicaciones Móviles Inteligentes",
+    Icon: Layout,
+    titulo: "Webs y paneles de control",
     texto:
-      "Creamos apps nativas que tus clientes realmente querrán usar. Desde herramientas para fidelizar usuarios hasta sistemas de gestión interna, todo sincronizado en tiempo real con tu base de datos inteligente.",
+      "Sitios corporativos, landings de conversión y dashboards para operar el negocio. Rápidos, seguros y pensados para conectar con tus agentes de IA y tus procesos de venta.",
   },
   {
     id: "agentes",
     orden: 3,
     Icon: Bot,
-    titulo: "Agentes de Voz y Texto con IA",
+    titulo: "Agentes de IA (texto y voz)",
     texto:
-      "Humanizamos tu tecnología. Implementamos asistentes que no solo responden mensajes, sino que hablan con una voz humana clonada de tu propia marca para cerrar ventas, dar soporte y calificar prospectos vía canal oficial de WhatsApp automatizado con IA, las 24 horas.",
+      "Asistentes que califican leads, responden dudas y envían notas de voz con identidad de tu marca. Mismo tono en WhatsApp, chat web y dentro de la app — disponibles 24/7 sin saturar a tu equipo.",
   },
   {
-    id: "erp",
+    id: "integraciones",
     orden: 4,
-    Icon: Blocks,
-    titulo: "Integración de Sistemas (ERP/Odoo)",
+    Icon: Plug,
+    titulo: "Integraciones a medida",
     texto:
-      "Conectamos lo que tus clientes ven en línea (web y aplicación) con el núcleo operativo de tu empresa (inventario, facturación, logística). Hacemos que tus sistemas se integren para que dejes de depender del trabajo manual repetitivo.",
+      "Conectamos tu producto digital con pagos, CRM, inventario o sistemas que ya usas. Menos copiar datos a mano y más operación fluida entre lo que ve el cliente y lo que pasa en tu negocio.",
   },
 ];

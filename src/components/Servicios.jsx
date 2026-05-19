@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { serviciosItems } from "../data/servicios.js";
+import { serviciosIntro, serviciosItems } from "../data/servicios.js";
 import SectionReveal from "../motion/SectionReveal.jsx";
 import { staggerChildren, staggerItem, springSoft } from "../motion/variants.js";
 
@@ -7,7 +7,7 @@ export default function Servicios() {
   const reduce = useReducedMotion();
 
   return (
-    <SectionReveal id="servicios" className="scroll-mt-24">
+    <SectionReveal id="servicios" className="relative scroll-mt-24">
       <div className="mx-auto max-w-container-max px-margin-mobile py-24 md:px-margin-desktop">
         <motion.div
           className="mx-auto mb-16 max-w-3xl text-center md:mb-20"
@@ -16,13 +16,11 @@ export default function Servicios() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="font-label-sm mb-4 uppercase tracking-[0.3em] text-primary">Nuestros Servicios</h2>
-          <h3 className="font-headline-lg text-2xl text-on-surface md:text-4xl">
-            De la presencia digital al núcleo de tu operación
-          </h3>
-          <p className="mt-4 leading-relaxed text-on-surface-variant">
-            Cuatro líneas de trabajo para que vendas más, con menos fricción y con sistemas que puedes hacer crecer.
-          </p>
+          <h2 className="font-label-sm mb-4 uppercase tracking-[0.3em] text-primary">
+            {serviciosIntro.eyebrow}
+          </h2>
+          <h3 className="font-headline-lg text-2xl text-primary md:text-4xl">{serviciosIntro.titulo}</h3>
+          <p className="mt-4 leading-relaxed text-on-surface-variant">{serviciosIntro.lead}</p>
         </motion.div>
 
         <motion.div
@@ -36,11 +34,11 @@ export default function Servicios() {
             <motion.article
               key={id}
               variants={staggerItem}
-              className="group border border-outline bg-surface-container-lowest p-8 text-left md:p-10"
-              whileHover={reduce ? {} : { y: -6, borderColor: "rgba(173, 206, 186, 0.4)" }}
+              className="group border border-outline bg-surface-container-lowest p-8 text-left shadow-sm transition-colors hover:border-primary/50 md:p-10"
+              whileHover={reduce ? {} : { y: -6, borderColor: "rgba(71, 101, 85, 0.35)" }}
               transition={springSoft}
             >
-              <div className="mb-5 flex items-start justify-between gap-4">
+              <motion.div className="mb-5 flex items-start justify-between gap-4">
                 <span className="font-mono-code text-sm font-medium text-primary/80">{orden}.</span>
                 <motion.span
                   className="text-primary"
@@ -49,8 +47,10 @@ export default function Servicios() {
                 >
                   <Icon className="h-10 w-10" strokeWidth={1.5} aria-hidden="true" />
                 </motion.span>
-              </div>
-              <h4 className="font-headline-lg mb-3 text-xl transition-colors group-hover:text-primary">{titulo}</h4>
+              </motion.div>
+              <h4 className="font-headline-lg mb-3 text-xl text-primary transition-colors group-hover:text-secondary">
+                {titulo}
+              </h4>
               <p className="font-body-md leading-relaxed text-on-surface-variant">{texto}</p>
             </motion.article>
           ))}

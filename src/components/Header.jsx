@@ -29,7 +29,7 @@ export default function Header() {
           >
             <Sparkles className="h-7 w-7 md:h-8 md:w-8" strokeWidth={1.75} />
           </motion.span>
-          <span className="font-headline-lg text-base font-bold tracking-widest text-on-surface md:text-xl">
+          <span className="font-headline-lg text-base font-bold tracking-widest text-primary md:text-xl">
             VECTOR STUDIOS AI
           </span>
         </motion.a>
@@ -49,7 +49,7 @@ export default function Header() {
         <motion.a
           href="#contacto"
           className="whitespace-nowrap bg-primary px-4 py-2 text-center font-label-sm uppercase tracking-widest text-on-primary md:px-6"
-          whileHover={reduce ? {} : { scale: 1.03, boxShadow: "0 0 24px rgba(173,206,186,0.25)" }}
+          whileHover={reduce ? {} : { scale: 1.02, boxShadow: "0 10px 40px rgba(71, 101, 85, 0.12)" }}
           whileTap={reduce ? {} : { scale: 0.97 }}
           transition={springSoft}
         >

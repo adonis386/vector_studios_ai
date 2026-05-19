@@ -2,7 +2,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useId, useMemo } from "react";
 
 const VB = 100;
-/** Origen del campo: ligeramente bajo el centro (composición tipo “emisión”) */
 const CX = 50;
 const CY = 58;
 
@@ -16,14 +15,13 @@ function raysFromOrigin(count, lengthMin, lengthMax, angleOffsetDeg) {
       x2: CX + Math.cos(rad) * len,
       y2: CY + Math.sin(rad) * len,
       strokeWidth: i % 4 === 0 ? 0.22 : 0.12,
-      opacity: 0.06 + (i % 5) * 0.018,
+      opacity: 0.04 + (i % 5) * 0.012,
     };
   });
 }
 
 /**
- * Fondo tipo “campo vectorial”: rayos orientados desde un origen (dirección + magnitud),
- * en honor al nombre Vector Studios AI. Muy sutil, no compite con el contenido.
+ * Campo vectorial sutil sobre fondo claro (laboratorio / precisión).
  */
 export default function VectorStudioBackground() {
   const reduce = useReducedMotion();
@@ -52,9 +50,9 @@ export default function VectorStudioBackground() {
         >
           <defs>
             <radialGradient id={gradId} cx={CX} cy={CY} r="52" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="rgb(173, 206, 186)" stopOpacity="0.14" />
-              <stop offset="45%" stopColor="rgb(173, 206, 186)" stopOpacity="0.05" />
-              <stop offset="100%" stopColor="rgb(5, 5, 5)" stopOpacity="0" />
+              <stop offset="0%" stopColor="rgb(29, 58, 44)" stopOpacity="0.08" />
+              <stop offset="50%" stopColor="rgb(29, 58, 44)" stopOpacity="0.03" />
+              <stop offset="100%" stopColor="rgb(250, 249, 246)" stopOpacity="0" />
             </radialGradient>
             <marker
               id={`${id}-arrow`}
@@ -65,7 +63,7 @@ export default function VectorStudioBackground() {
               orient="auto"
               markerUnits="strokeWidth"
             >
-              <path d="M 0 0 L 2.2 1.1 L 0 2.2 Z" fill="rgba(173,206,186,0.14)" />
+              <path d="M 0 0 L 2.2 1.1 L 0 2.2 Z" fill="rgba(29, 58, 44, 0.12)" />
             </marker>
           </defs>
           <rect width={VB} height={VB} fill={`url(#${gradId})`} />
@@ -77,7 +75,7 @@ export default function VectorStudioBackground() {
                 y1={CY}
                 x2={r.x2}
                 y2={r.y2}
-                stroke="rgba(173, 206, 186, 0.11)"
+                stroke="rgba(29, 58, 44, 0.09)"
                 strokeWidth={r.strokeWidth}
                 opacity={r.opacity}
               />
@@ -89,7 +87,7 @@ export default function VectorStudioBackground() {
                 y1={CY}
                 x2={r.x2}
                 y2={r.y2}
-                stroke="rgba(173, 206, 186, 0.08)"
+                stroke="rgba(29, 58, 44, 0.06)"
                 strokeWidth={r.strokeWidth * 0.85}
                 opacity={r.opacity * 0.75}
                 markerEnd={i % 5 === 0 ? `url(#${id}-arrow)` : undefined}
@@ -101,13 +99,13 @@ export default function VectorStudioBackground() {
 
       {!reduce && (
         <motion.div
-          className="absolute left-1/2 top-[48%] h-[min(90vh,900px)] w-[min(90vw,900px)] -translate-x-1/2 -translate-y-1/2 opacity-30"
+          className="absolute left-1/2 top-[48%] h-[min(90vh,900px)] w-[min(90vw,900px)] -translate-x-1/2 -translate-y-1/2 opacity-40"
           animate={{ rotate: [0, -360] }}
           transition={{ duration: 640, repeat: Infinity, ease: "linear" }}
           style={{ transformOrigin: "50% 50%" }}
         >
           <svg className="h-full w-full" viewBox={`0 0 ${VB} ${VB}`} preserveAspectRatio="xMidYMid meet">
-            <g strokeLinecap="round" stroke="rgba(180, 198, 244, 0.06)">
+            <g strokeLinecap="round" stroke="rgba(10, 31, 68, 0.05)">
               {Array.from({ length: 16 }, (_, i) => {
                 const a = ((360 / 16) * i + 11) * (Math.PI / 180);
                 const len = 28 + (i % 3) * 6;
@@ -127,8 +125,8 @@ export default function VectorStudioBackground() {
         </motion.div>
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-90" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,transparent_0%,#050505_75%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-95" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_50%_0%,transparent_0%,#faf9f6_78%)]" />
     </div>
   );
 }

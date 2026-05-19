@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <motion.footer
-      className="w-full border-t border-on-surface/10 bg-surface py-14 md:py-16"
+      className="w-full border-t border-outline bg-surface-container-high py-14 md:py-16"
       initial={reduce ? false : { opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -26,12 +26,12 @@ export default function Footer() {
             >
               <Sparkles className="h-7 w-7" strokeWidth={1.75} />
             </motion.span>
-            <span className="font-headline-lg text-lg font-bold uppercase tracking-widest text-on-surface">
+            <span className="font-headline-lg text-lg font-bold uppercase tracking-widest text-primary">
               Vector Studios AI
             </span>
           </div>
           <p className="font-body-md text-sm leading-relaxed text-on-surface-variant">
-            Ingeniería aplicada a ventas: sistemas propios, voz creíble y automatización que no sacrifica confianza.
+            Desarrollo de apps y webs con agentes de IA integrados. Código y datos tuyos; texto y voz con identidad de tu marca.
           </p>
           <p className="font-label-sm text-[10px] uppercase tracking-widest text-on-surface-variant/50">
             © {year} Vector Studios AI. Todos los derechos reservados.

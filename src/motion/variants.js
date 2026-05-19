@@ -32,10 +32,10 @@ export const staggerItem = {
   },
 };
 
-/** Orbe / resplandor — pulso orgánico tipo “núcleo activo” */
+/** Orbe — pulso suave sobre fondo claro */
 export const orbAlive = {
-  scale: [1, 1.06, 0.98, 1.04, 1],
-  opacity: [0.45, 0.72, 0.5, 0.68, 0.45],
+  scale: [1, 1.04, 0.99, 1.03, 1],
+  opacity: [0.35, 0.55, 0.4, 0.5, 0.35],
 };
 
 export const orbTransition = {

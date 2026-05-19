@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Vector Studios AI — Documento para socios v2.0</title>
+  <style>
+    @page { margin: 22mm 20mm; }
+    :root {
+      --primary: #062418;
+      --secondary: #4c5e86;
+      --text: #1a1c1b;
+      --muted: #424844;
+      --border: #e3e2e0;
+      --bg: #faf9f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--text);
+      margin: 0;
+      background: #fff;
+    }
+    .cover {
+      page-break-after: always;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 56px;
+      background: linear-gradient(160deg, #faf9f6 0%, #e9e8e5 100%);
+      border-bottom: 4px solid var(--primary);
+    }
+    .cover .label {
+      font-size: 9pt;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 12px;
+    }
+    .cover h1 {
+      font-size: 2.4rem;
+      color: var(--primary);
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .cover h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin: 0 0 32px;
+    }
+    .cover .meta {
+      font-size: 10pt;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .cover .confidential {
+      margin-top: 48px;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.7);
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+    }
+    .content { padding: 0 4px; max-width: 100%; }
+  .toc {
+      page-break-after: always;
+      padding: 40px 0;
+    }
+    .toc h2 { color: var(--primary); border: none; margin-top: 0; }
+    .toc ol { padding-left: 1.25rem; }
+    .toc li { margin: 0.4rem 0; }
+    .toc a { color: var(--text); text-decoration: none; }
+    h2 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--primary);
+      page-break-after: avoid;
+    }
+    h3 { font-size: 1rem; color: var(--primary); margin: 1.25rem 0 0.5rem; page-break-after: avoid; }
+    h4 { font-size: 0.95rem; margin: 1rem 0 0.4rem; }
+    p { margin: 0.5rem 0; }
+    blockquote {
+      margin: 1rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid var(--primary);
+      background: var(--bg);
+      font-style: italic;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1rem;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.45rem 0.55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eeeeeb; font-weight: 600; color: var(--primary); }
+    ul, ol { margin: 0.4rem 0; padding-left: 1.2rem; }
+    li { margin: 0.25rem 0; }
+    .section { page-break-inside: avoid; }
+    .page-break { page-break-before: always; }
+    .highlight-box {
+      background: #c9ead6;
+      border: 1px solid rgba(6,36,24,0.15);
+      padding: 12px 16px;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .highlight-box strong { color: var(--primary); }
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li::before { content: "☐ "; color: var(--primary); }
+    a { color: var(--secondary); }
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 8.5pt;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media print {
+      .cover { min-height: auto; height: 100vh; }
+      h2 { page-break-before: auto; }
+      table { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cover">
+    <p class="label">Confidencial · Uso interno</p>
+    <h1>Vector Studios AI</h1>
+    <h2>Documento estratégico para socios</h2>
+    <div class="meta">
+      <strong>Versión 2.0</strong> · Mayo 2026<br />
+      Modelo de negocio · Competencia · Costos · Planes comerciales · Decisiones
+    </div>
+    <div class="confidential">Presentación a socios — no distribuir sin autorización</div>
+  </div>
+
+  <div class="content toc">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#s1">Resumen para socios</a></li>
+      <li><a href="#s2">Qué es Vector Studios AI</a></li>
+      <li><a href="#s3">Dos líneas de ingreso</a></li>
+      <li><a href="#s4">Propuesta de valor y stack</a></li>
+      <li><a href="#s5">Servicios (oferta)</a></li>
+      <li><a href="#s6">Análisis de competencia</a></li>
+      <li><a href="#s7">Estructura de costos</a></li>
+      <li><a href="#s8">Planes actuales</a></li>
+      <li><a href="#s9">Recomendación de precios</a></li>
+      <li><a href="#s10">Posicionamiento competitivo</a></li>
+      <li><a href="#s11">Decisiones para socios</a></li>
+      <li><a href="#s12">Plan de acción 90 días</a></li>
+      <li><a href="#s13">Anexos</a></li>
+    </ol>
+  </div>
+
+  <div class="content">
+
+    <h2 id="s1">1. Resumen para socios</h2>
+    <div class="highlight-box">
+      <strong>En una frase:</strong> Estudio de desarrollo (apps + webs) con agentes de IA en texto y voz, código y datos del cliente.
+    </div>
+    <blockquote>Construimos apps y webs que venden y atienden solas: producto en la nube, agentes en WhatsApp, web y app.</blockquote>
+
+    <h3>Hallazgos clave</h3>
+    <table>
+      <tr><th>Tema</th><th>Conclusión</th></tr>
+      <tr><td>Posicionamiento</td><td>Desarrollo + IA; no agencia barata ni plataforma enterprise.</td></tr>
+      <tr><td>Plan estrella</td><td><strong>Voice Identity</strong> (texto + voz de marca).</td></tr>
+      <tr><td>Riesgo</td><td>Smart Connect y Full Ecosystem pueden quedar subcotizados sin límites de alcance.</td></tr>
+      <tr><td>Phantom Media</td><td>Landings ~$249 — producto distinto; no competir en precio.</td></tr>
+      <tr><td>Botinfy</td><td>Enterprise — atacar PYME con entregables tácticos.</td></tr>
+      <tr><td>Nodo</td><td>Agencia 360° — complemento o alianza.</td></tr>
+    </table>
+
+    <h2 id="s2" class="page-break">2. Qué es Vector Studios AI</h2>
+    <h3>Qué somos</h3>
+    <ul>
+      <li>Desarrollo de apps móviles y webs (Next.js, Firebase).</li>
+      <li>Integración de IA conversacional (texto) y voz de marca.</li>
+      <li>Entrega de activos digitales con propiedad técnica clara.</li>
+    </ul>
+    <h3>Qué no somos</h3>
+    <ul>
+      <li>Agencia de packs baratos (Phantom).</li>
+      <li>Plataforma “cerebro digital” corporativo (Botinfy).</li>
+      <li>Agencia audiovisual 360° (Nodo), salvo alianza.</li>
+    </ul>
+
+    <h2 id="s3">3. Dos líneas de ingreso</h2>
+    <table>
+      <tr><th></th><th>Servicios a medida</th><th>Producto propio</th></tr>
+      <tr><td>Ingreso</td><td>Setup + mensual</td><td>MRR / licencias</td></tr>
+      <tr><td>Riesgo</td><td>Bajo con scope definido</td><td>Alto hasta PMF</td></tr>
+    </table>
+    <p><strong>Recomendación año 1:</strong> 70% servicios / 30% producto.</p>
+
+    <h2 id="s4">4. Propuesta de valor y stack</h2>
+    <table>
+      <tr><th>Capa</th><th>Stack</th><th>Venta</th></tr>
+      <tr><td>Web</td><td>Next.js</td><td>Sitio, dashboard</td></tr>
+      <tr><td>Móvil</td><td>React Native</td><td>App iOS/Android</td></tr>
+      <tr><td>Backend</td><td>Firebase</td><td>Datos tiempo real</td></tr>
+      <tr><td>IA texto</td><td>API + Functions</td><td>WhatsApp, chat</td></tr>
+      <tr><td>IA voz</td><td>Síntesis/clonación</td><td>Notas de marca</td></tr>
+    </table>
+
+    <h2 id="s5">5. Servicios (oferta)</h2>
+    <ol>
+      <li>Aplicaciones móviles</li>
+      <li>Webs y paneles</li>
+      <li>Agentes de IA (texto y voz)</li>
+      <li>Integraciones a medida</li>
+    </ol>
+    <p><em>No incluir en planes base:</em> Meta/Google Ads, branding masivo, “marketing 360°” sin horas.</p>
+
+    <h2 id="s6" class="page-break">6. Análisis de competencia</h2>
+    <table>
+      <tr><th>Competidor</th><th>URL</th><th>Precio ref.</th><th>Relación</th></tr>
+      <tr>
+        <td><strong>Phantom Media</strong></td>
+        <td><a href="https://agenciaphantommedia.com/">agenciaphantommedia.com</a></td>
+        <td>Landing ~$249; Web Master ~$999; ads ~$350–500/mes</td>
+        <td>No competir en precio de landing</td>
+      </tr>
+      <tr>
+        <td><strong>Nodo Agency</strong></td>
+        <td><a href="https://somosnodo.com/">somosnodo.com</a></td>
+        <td>Sin precios públicos; premium VE</td>
+        <td>Alianza creativo + Vector técnico</td>
+      </tr>
+      <tr>
+        <td><strong>Botinfy</strong></td>
+        <td><a href="https://botinfy.com/">botinfy.com</a></td>
+        <td>Enterprise, sin tarifas públicas</td>
+        <td>Segmento PYME vs corporativo</td>
+      </tr>
+    </table>
+
+    <h3>Hueco de mercado</h3>
+    <p>Producto (app + web + Firebase) + agentes texto/voz + propiedad del cliente + USD LATAM con alcance documentado.</p>
+
+    <h2 id="s7">7. Estructura de costos</h2>
+    <table>
+      <tr><th>Concepto</th><th>Rango mensual (PYME)</th></tr>
+      <tr><td>API conversacional</td><td>$30 – $150</td></tr>
+      <tr><td>WhatsApp API</td><td>Por conversación</td></tr>
+      <tr><td>Voz</td><td>$20 – $200+</td></tr>
+      <tr><td>Firebase</td><td>$0 – $80</td></tr>
+      <tr><td>Soporte (horas)</td><td>2 – 8 h/mes</td></tr>
+    </table>
+    <p><strong>Facturación recomendada:</strong> Setup + Retainer + Uso de IA (transparente).</p>
+
+    <h2 id="s8">8. Planes actuales (landing)</h2>
+    <table>
+      <tr><th>Plan</th><th>Setup</th><th>Mensual</th><th>Diagnóstico</th></tr>
+      <tr><td>Smart Connect</td><td>$800 – $1,200</td><td>$150</td><td>Setup ajustado; mensual riesgoso</td></tr>
+      <tr><td>Voice Identity</td><td>$2,000 – $2,500</td><td>$350</td><td>Plan estrella — OK con topes de voz</td></tr>
+      <tr><td>Full Ecosystem</td><td>desde $4,500</td><td>$700</td><td>Subcotizado si incluye app + ERP</td></tr>
+    </table>
+
+    <h2 id="s9" class="page-break">9. Recomendación de precios (aprobación socios)</h2>
+    <table>
+      <tr><th>Plan</th><th>Setup (piso)</th><th>Mensual</th><th>Alcance</th></tr>
+      <tr><td>Entrada (texto)</td><td>$1,400 – $1,800</td><td>$199 – $249</td><td>Web + bot; ~500 conv/mes; 2 h soporte</td></tr>
+      <tr><td>Voice Identity</td><td>$2,500 – $3,500</td><td>$349 – $449</td><td>+ voz; minutos/mes acotados</td></tr>
+      <tr><td>Completo</td><td>$4,500 fase 1 + cotización</td><td>$599 – $999</td><td>Fases: web+IA → app → integraciones</td></tr>
+    </table>
+
+    <h3>Venta por fases (ecosistema completo)</h3>
+    <table>
+      <tr><th>Fase</th><th>Entregable</th><th>Inversión</th></tr>
+      <tr><td>A</td><td>Web + panel + IA</td><td>$3,500 – $5,500</td></tr>
+      <tr><td>B</td><td>App móvil MVP</td><td>+$4,000 – $8,000</td></tr>
+      <tr><td>C</td><td>Integraciones</td><td>+$2,000 – $6,000 / sistema</td></tr>
+    </table>
+
+    <h2 id="s10">10. Posicionamiento competitivo</h2>
+    <ul>
+      <li><strong>vs Phantom:</strong> “$249 no es tu inventario en WhatsApp ni tu código.”</li>
+      <li><strong>vs Nodo:</strong> “Se ve bien + funciona y vende solo.”</li>
+      <li><strong>vs Botinfy:</strong> “Módulo en 6–8 semanas, no proyecto de 12 meses.”</li>
+    </ul>
+
+    <h2 id="s11">11. Decisiones para socios</h2>
+    <ul class="checklist">
+      <li>Mercado principal (LATAM / México / USA)</li>
+      <li>Vertical prioritario (clínica, inmobiliaria, retail…)</li>
+      <li>Aprobar nueva tabla de precios</li>
+      <li>Separar APIs en factura</li>
+      <li>No incluir ads en planes base</li>
+      <li>Vender ecosistema solo por fases</li>
+      <li>Explorar alianza con agencia creativa</li>
+    </ul>
+
+    <h2 id="s12">12. Plan de acción 90 días</h2>
+    <table>
+      <tr><th>Semanas</th><th>Acción</th></tr>
+      <tr><td>1–2</td><td>Cerrar decisiones · acta de socios</td></tr>
+      <tr><td>2–3</td><td>Actualizar landing y precios</td></tr>
+      <tr><td>3–4</td><td>Plantilla de propuesta comercial</td></tr>
+      <tr><td>4–8</td><td>Piloto en vertical elegido</td></tr>
+      <tr><td>8–12</td><td>Producto Labs o alianza Nodo</td></tr>
+    </table>
+
+    <h2 id="s13">13. Anexos</h2>
+    <p><strong>Referencias:</strong></p>
+    <ul>
+      <li><a href="https://botinfy.com/">botinfy.com</a></li>
+      <li><a href="https://somosnodo.com/">somosnodo.com</a></li>
+      <li><a href="https://agenciaphantommedia.com/">agenciaphantommedia.com</a></li>
+    </ul>
+    <p><strong>Repositorio:</strong> vector_studios_ia · Contenido web: src/data/*.js</p>
+
+    <p class="footer-note">Vector Studios AI · Documento para socios v2.0 · Mayo 2026 · Fin del documento</p>
+  </div>
+
+</body>
+</html>
