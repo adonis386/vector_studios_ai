@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Vector Studios AI — Manual de marca v1.0</title>
+  <style>
+    @page { margin: 20mm 18mm; }
+    :root {
+      --primary: #062418;
+      --primary-mid: #1d3a2c;
+      --secondary: #4c5e86;
+      --text: #1a1c1b;
+      --muted: #424844;
+      --border: #e3e2e0;
+      --bg: #faf9f6;
+      --accent: #c9ead6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.55;
+      color: var(--text);
+      margin: 0;
+      background: #fff;
+    }
+    .cover {
+      page-break-after: always;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 56px;
+      background: linear-gradient(160deg, var(--bg) 0%, #e9e8e5 100%);
+      border-bottom: 4px solid var(--primary);
+    }
+    .cover .label {
+      font-size: 9pt;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 12px;
+    }
+    .cover h1 { font-size: 2.2rem; color: var(--primary); margin: 0 0 8px; }
+    .cover h2 { font-size: 1.15rem; font-weight: 500; color: var(--muted); margin: 0 0 28px; }
+    .cover .meta { font-size: 10pt; color: var(--muted); line-height: 1.8; }
+    .swatch-row { display: flex; gap: 8px; margin-top: 24px; flex-wrap: wrap; }
+    .swatch {
+      width: 72px;
+      height: 48px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-size: 7pt;
+      padding: 4px;
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+    }
+    .content { padding: 0 4px; }
+    .toc { page-break-after: always; padding: 32px 0; }
+    .toc h2 { border: none; margin-top: 0; }
+    .toc ol { padding-left: 1.25rem; }
+    .toc li { margin: 0.35rem 0; }
+    .toc a { color: var(--text); text-decoration: none; }
+    h2 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin: 1.75rem 0 0.6rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid var(--primary-mid);
+      page-break-after: avoid;
+    }
+    h3 { font-size: 1rem; color: var(--primary-mid); margin: 1rem 0 0.4rem; }
+    p { margin: 0.45rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.6rem 0 1rem;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eeeeeb; font-weight: 600; color: var(--primary); }
+    blockquote {
+      margin: 0.75rem 0;
+      padding: 0.65rem 1rem;
+      border-left: 4px solid var(--primary-mid);
+      background: var(--bg);
+      font-style: italic;
+      font-size: 9.5pt;
+    }
+    .highlight {
+      background: var(--accent);
+      border: 1px solid rgba(6, 36, 24, 0.12);
+      padding: 10px 14px;
+      margin: 0.75rem 0;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    ul { margin: 0.35rem 0; padding-left: 1.15rem; }
+    li { margin: 0.2rem 0; }
+    .dont { color: #8b1a1a; }
+    .footer-note {
+      margin-top: 2rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      font-size: 8pt;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media print {
+      .cover { min-height: auto; height: 100vh; }
+      table { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cover">
+    <p class="label">Identidad visual · Uso interno y partners</p>
+    <h1>Vector Studios AI</h1>
+    <h2>Manual de marca</h2>
+    <div class="meta">
+      <strong>Versión 1.0</strong> · Mayo 2026<br />
+      Esencia · Color · Tipografía · Voz · UI · Co-branding
+    </div>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#faf9f6;color:#1a1c1b">#FAF9F6</div>
+      <div class="swatch" style="background:#062418">#062418</div>
+      <div class="swatch" style="background:#1d3a2c">#1D3A2C</div>
+      <div class="swatch" style="background:#4c5e86">#4C5E86</div>
+      <div class="swatch" style="background:#c9ead6;color:#062418">#C9EAD6</div>
+    </div>
+  </div>
+
+  <div class="content toc">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#s1">Esencia de marca</a></li>
+      <li><a href="#s2">Posicionamiento y mensajes</a></li>
+      <li><a href="#s3">Logotipo y nombre</a></li>
+      <li><a href="#s4">Paleta de color</a></li>
+      <li><a href="#s5">Tipografía</a></li>
+      <li><a href="#s6">Iconografía y arte hero</a></li>
+      <li><a href="#s7">Voz y tono</a></li>
+      <li><a href="#s8">Layout y componentes UI</a></li>
+      <li><a href="#s9">Aplicaciones y co-branding</a></li>
+      <li><a href="#s10">Archivos en el repo</a></li>
+    </ol>
+  </div>
+
+  <div class="content">
+
+    <h2 id="s1">1. Esencia de marca</h2>
+    <p><strong>Vector Studios AI</strong> es un estudio de desarrollo de productos digitales (apps móviles y webs) que integra agentes de IA en texto y voz. Entregamos código y datos bajo control del cliente.</p>
+    <table>
+      <tr><th>Personalidad</th><th>Metáfora visual</th><th>Audiencia</th></tr>
+      <tr>
+        <td><strong>Precisión</strong> · <strong>Confianza</strong> · <strong>Claridad</strong></td>
+        <td>Laboratorio de ingeniería en modo claro: rejilla sutil, líneas vectoriales, glow verde salvia y azul perla</td>
+        <td>PYME y equipos operativos · LATAM · precios USD</td>
+      </tr>
+    </table>
+
+    <h2 id="s2">2. Posicionamiento y mensajes</h2>
+    <blockquote>Construimos apps y webs que venden y atienden solas: producto en la nube, agentes en WhatsApp, la app y la web, con propiedad técnica clara.</blockquote>
+    <table>
+      <tr><th>Pilar</th><th>Mensaje</th></tr>
+      <tr><td>Desarrollo</td><td>App + web + panel, hechos a medida</td></tr>
+      <tr><td>IA texto</td><td>Atención y ventas 24/7 por WhatsApp y chat</td></tr>
+      <tr><td>IA voz</td><td>Tu marca se escucha, no un bot de plantilla</td></tr>
+      <tr><td>Propiedad</td><td>Código y datos tuyos; costos de API transparentes</td></tr>
+    </table>
+    <p class="dont"><strong>No en público:</strong> nombres de proveedores (OpenAI, ElevenLabs, WhatChimp); “laboratorio de voz” como único eje; promesas 360° fuera de contrato.</p>
+
+    <h2 id="s3">3. Logotipo y nombre</h2>
+    <table>
+      <tr><th>Elemento</th><th>Especificación</th></tr>
+      <tr><td>Nombre</td><td><strong>Vector Studios AI</strong> — nav: VECTOR STUDIOS AI; prosa: title case</td></tr>
+      <tr><td>Wordmark</td><td>Geist 600–700 · tracking +0.08–0.12em · color #062418 o #1D3A2C</td></tr>
+      <tr><td>Isotipo</td><td>Punto + rayos vectoriales; trazo fino; opcional onda de voz sutil</td></tr>
+      <tr><td>Archivos</td><td><code>public/logo.svg</code>, <code>logo-mark.svg</code>, <code>favicon.svg</code></td></tr>
+      <tr><td>Mínimo digital</td><td>Wordmark 120px ancho · isotipo 24px</td></tr>
+    </table>
+    <p><strong>Prohibido:</strong> estirar, rotar, sombra dura, gradiente arcoíris, neon cyberpunk, mascota robot.</p>
+
+    <h2 id="s4">4. Paleta de color</h2>
+    <p><strong>Premium Light:</strong> 70% fondos neutros · 20% primary/deep · 10% secondary y primary-fixed.</p>
+    <table>
+      <tr><th>Token</th><th>HEX</th><th>Uso</th></tr>
+      <tr><td>Background</td><td>#FAF9F6</td><td>Fondo página</td></tr>
+      <tr><td>On background</td><td>#1A1C1B</td><td>Párrafos</td></tr>
+      <tr><td>Primary deep</td><td>#062418</td><td>Titulares, wordmark</td></tr>
+      <tr><td>Primary</td><td>#1D3A2C</td><td>CTAs, iconos acción</td></tr>
+      <tr><td>Secondary</td><td>#4C5E86</td><td>Acento titular línea 2, links</td></tr>
+      <tr><td>Primary fixed</td><td>#C9EAD6</td><td>Badges, highlights</td></tr>
+      <tr><td>On surface variant</td><td>#424844</td><td>Texto secundario</td></tr>
+    </table>
+
+    <h2 id="s5">5. Tipografía</h2>
+    <table>
+      <tr><th>Rol</th><th>Familia</th><th>Uso</th></tr>
+      <tr><td>UI / marketing</td><td>Geist</td><td>Titulares, body, labels</td></tr>
+      <tr><td>Código / status</td><td>JetBrains Mono</td><td>Terminal, KPIs</td></tr>
+    </table>
+    <table>
+      <tr><th>Estilo</th><th>Tamaño</th><th>Peso</th><th>Uso</th></tr>
+      <tr><td>Display lg</td><td>48–64px</td><td>600</td><td>Hero</td></tr>
+      <tr><td>Headline lg</td><td>32px</td><td>500</td><td>Secciones</td></tr>
+      <tr><td>Body md</td><td>16px</td><td>400</td><td>Párrafos</td></tr>
+      <tr><td>Label md</td><td>12px</td><td>600</td><td>Eyebrows MAYÚSCULAS</td></tr>
+    </table>
+
+    <h2 id="s6">6. Iconografía y arte hero</h2>
+    <ul>
+      <li>Iconos: <strong>Lucide</strong>, trazo 1.5–2px, color primary — sin multicolor.</li>
+      <li>Ilustración: líneas vectoriales, glow verde/lavanda; sin robots 3D ni cerebros cliché.</li>
+      <li>Hero: <code>public/hero.png</code> — espacio libre izquierda para copy; overlay gradiente desde background.</li>
+    </ul>
+
+    <h2 id="s7">7. Voz y tono</h2>
+    <table>
+      <tr><th>Somos</th><th>No somos</th></tr>
+      <tr><td>Claros, técnicos cuando hace falta</td><td>Hype vacío, jerga IA sin sustancia</td></tr>
+      <tr><td>Honestos con alcance y precios</td><td>“API gratis ilimitada”</td></tr>
+    </table>
+    <p>Español neutro · tuteo en web (“tu marca”, “tu negocio”). CTAs: <em>Solicitar diagnóstico</em>, no “¡Empieza ya!”.</p>
+
+    <h2 id="s8">8. Layout y componentes UI</h2>
+    <table>
+      <tr><th>Elemento</th><th>Regla</th></tr>
+      <tr><td>Grid</td><td>Max 1280px · márgenes 48px desktop / 16px móvil</td></tr>
+      <tr><td>Secciones</td><td>py-24 / py-32 · baseline 4px</td></tr>
+      <tr><td>Botón primario</td><td>Fondo #1D3A2C · texto blanco · label uppercase · sin gradiente</td></tr>
+      <tr><td>Tarjetas</td><td>Borde outline · hover border-primary/50</td></tr>
+      <tr><td>Web</td><td>Modo claro fijo · orden: Servicios → Voz → Por qué → Planes → Contacto</td></tr>
+    </table>
+
+    <h2 id="s9">9. Aplicaciones y co-branding</h2>
+    <h3>Propuesta PDF</h3>
+    <p>Portada con hero o #FAF9F6 + wordmark; tablas de precio en mono; tres líneas: Setup / Retainer / Uso IA.</p>
+    <h3>WhatChimp (WhatsApp)</h3>
+    <div class="highlight">
+      Web pública: “WhatsApp oficial” sin logo WhatChimp en hero. Propuesta técnica: nombre BSP y costos. No usar colores WhatChimp como marca Vector.
+    </div>
+    <h3>Redes</h3>
+    <p>Avatar: isotipo sobre #FAF9F6 o #062418. OG: 1200×630 — <code>public/og-image.svg</code> (exportar PNG en producción).</p>
+
+    <h2 id="s10">10. Archivos en el repo</h2>
+    <table>
+      <tr><th>Recurso</th><th>Ruta</th></tr>
+      <tr><td>Tokens Tailwind</td><td><code>tailwind.config.js</code></td></tr>
+      <tr><td>Estilos</td><td><code>src/index.css</code></td></tr>
+      <tr><td>Logo / favicon / OG</td><td><code>public/logo*.svg</code>, <code>favicon.svg</code>, <code>og-image.svg</code></td></tr>
+      <tr><td>Componente logo</td><td><code>src/components/BrandLogo.jsx</code></td></tr>
+      <tr><td>Copy landing</td><td><code>src/data/*.js</code></td></tr>
+      <tr><td>Modelo de negocio</td><td><code>docs/MODELO-DE-NEGOCIO-VECTOR-STUDIOS.pdf</code></td></tr>
+    </table>
+
+    <p class="footer-note">Vector Studios AI · Manual de marca v1.0 · Mayo 2026 · Documento vivo</p>
+  </div>
+
+</body>
+</html>

@@ -1,4 +1,7 @@
-/** Planes de inversión (USD) — desarrollo + IA */
+/**
+ * Referencia interna (USD) — no se muestra en la landing.
+ * La web usa la sección Cotiza (#cotiza). Ver docs/MODELO-DE-NEGOCIO v2.0.
+ */
 export const preciosIntro = {
   eyebrow: "Planes de inversión",
   titulo: "Elige el alcance según tu etapa",
@@ -8,16 +11,17 @@ export const preciosIntro = {
 export const preciosPlanes = [
   {
     id: "smart-connect",
-    nombre: "Smart Connect",
+    nombre: "Entrada",
     etiqueta: "Web + IA en texto",
     ideal: "Negocios que quieren presencia profesional y atención automatizada sin app móvil aún.",
-    desarrollo: "Sitio o landing de alto rendimiento + asistente de IA en texto (WhatsApp y/o chat web).",
-    estrategia: "Configuración del canal, guiones del asistente y conexión básica a tus datos.",
-    diferencial: "Entrada accesible al ecosistema: vendes y respondes fuera del horario de oficina.",
-    inversion: "$800 – $1,200 (setup) + $150/mes (mantenimiento y ajustes).",
+    desarrollo:
+      "Sitio o landing de alto rendimiento (5–7 secciones) + asistente de IA en texto (WhatsApp y/o chat web).",
+    estrategia: "Canal oficial, guiones del asistente y hasta 1 integración simple (CRM, hoja o webhook).",
+    diferencial: "Entrada al ecosistema: vendes y respondes fuera del horario (~500 conversaciones/mes incluidas en alcance base).",
+    inversion: "$1,400 – $1,800 (setup) + $199 – $249/mes (mantenimiento, ajustes y soporte ~2 h).",
     destacado: false,
     badge: null,
-    cta: "Comenzar con Smart Connect",
+    cta: "Comenzar con Entrada",
     ctaVariant: "outline",
   },
   {
@@ -25,10 +29,10 @@ export const preciosPlanes = [
     nombre: "Voice Identity",
     etiqueta: "Recomendado · texto + voz",
     ideal: "Marcas que quieren diferenciarse con voz propia y mayor tasa de cierre.",
-    desarrollo: "Todo Smart Connect + agente con notas de voz y identidad verbal de marca.",
-    estrategia: "Diseño de voz, guiones de venta y pruebas en WhatsApp y web.",
+    desarrollo: "Todo Entrada + agente con notas de voz e identidad verbal de marca.",
+    estrategia: "Diseño de voz, guiones de venta y pruebas en WhatsApp y web; minutos de voz/mes acotados.",
     diferencial: "Tu negocio se escucha como humano, no como un chatbot de plantilla.",
-    inversion: "$2,000 – $2,500 (setup) + $350/mes (mantenimiento e infraestructura de voz).",
+    inversion: "$2,500 – $3,500 (setup) + $349 – $449/mes (mantenimiento e infraestructura de voz).",
     destacado: true,
     badge: "Recomendado",
     cta: "Quiero Voice Identity",
@@ -36,17 +40,17 @@ export const preciosPlanes = [
   },
   {
     id: "full-ecosystem",
-    nombre: "Full Business Ecosystem",
-    etiqueta: "App + web + IA unificada",
+    nombre: "Completo",
+    etiqueta: "Producto digital por fases",
     ideal: "Empresas que necesitan app móvil, web corporativa e IA en todos los canales.",
     desarrollo:
-      "Aplicación móvil + web/panel admin + agentes de texto y voz + integraciones con inventario, pagos o ERP.",
-    estrategia: "Lanzamiento integral, optimización de procesos y soporte técnico prioritario.",
+      "Fase 1: web + panel + agentes texto/voz y arquitectura para crecer. Fases 2–3: app móvil e integraciones (inventario, pagos, ERP).",
+    estrategia: "Retainer de desarrollo, lanzamiento por fases y soporte técnico prioritario.",
     diferencial: "Un solo cerebro de IA para app, web y WhatsApp; propiedad técnica clara.",
-    inversion: "Desde $4,500 (proyecto a medida) + $700/mes (soporte premium).",
+    inversion: "$4,500 (Fase 1) + cotización fases siguientes · $599 – $999/mes (retainer dev y soporte).",
     destacado: false,
     badge: null,
-    cta: "Solicitar ecosistema",
+    cta: "Solicitar ecosistema completo",
     ctaVariant: "outline",
   },
 ];

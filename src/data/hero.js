@@ -6,7 +6,7 @@ export const heroContent = {
   description:
     "Desarrollamos aplicaciones móviles y plataformas web con infraestructura en la nube, datos en tiempo real y agentes de inteligencia artificial integrados. La IA no es un parche: responde por WhatsApp, en tu app o en la web, con código y datos bajo tu control.",
   ctaPrimary: { label: "Solicitar diagnóstico", href: "#contacto" },
-  ctaSecondary: { label: "Ver planes", href: "#precios" },
+  ctaSecondary: { label: "Cotiza con nosotros", href: "#cotiza" },
   statusLines: [
     { key: "dev", text: "DESARROLLO: APP + WEB" },
     { key: "ia", text: "AGENTE: TEXTO Y VOZ" },

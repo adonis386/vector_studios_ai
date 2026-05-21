@@ -78,16 +78,17 @@ export default {
         unit: "4px",
       },
       fontFamily: {
-        "label-sm": ["Geist", "system-ui", "sans-serif"],
-        "label-md": ["Geist", "system-ui", "sans-serif"],
+        sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "label-sm": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "label-md": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
         "mono-code": ["JetBrains Mono", "ui-monospace", "monospace"],
-        "headline-lg": ["Geist", "system-ui", "sans-serif"],
-        "headline-md": ["Geist", "system-ui", "sans-serif"],
-        "headline-lg-mobile": ["Geist", "system-ui", "sans-serif"],
-        "body-md": ["Geist", "system-ui", "sans-serif"],
-        "body-lg": ["Geist", "system-ui", "sans-serif"],
-        "body-sm": ["Geist", "system-ui", "sans-serif"],
-        "display-lg": ["Geist", "system-ui", "sans-serif"],
+        "headline-lg": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "headline-md": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "headline-lg-mobile": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "body-md": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "body-lg": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "body-sm": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        "display-lg": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
       },
       fontSize: {
         "label-sm": [
@@ -116,11 +117,24 @@ export default {
         ],
         "display-lg": [
           "48px",
-          { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" },
+          { lineHeight: "1.05", letterSpacing: "-0.04em", fontWeight: "600" },
+        ],
+        "display-xl": [
+          "clamp(2.25rem, 6.5vw, 4.75rem)",
+          { lineHeight: "0.92", letterSpacing: "-0.045em", fontWeight: "600" },
+        ],
+        "display-hero": [
+          "clamp(2.5rem, 10vw, 5.5rem)",
+          { lineHeight: "0.9", letterSpacing: "-0.05em", fontWeight: "600" },
         ],
       },
       boxShadow: {
         ambient: "0 4px 20px rgba(10, 31, 68, 0.04)",
+        card: "0 2px 8px rgba(6, 36, 24, 0.04), 0 16px 40px rgba(6, 36, 24, 0.06)",
+        "card-hover":
+          "0 6px 20px rgba(6, 36, 24, 0.07), 0 28px 56px rgba(76, 94, 134, 0.08)",
+        "card-featured":
+          "0 8px 28px rgba(29, 58, 44, 0.12), 0 32px 72px rgba(76, 94, 134, 0.1)",
       },
     },
   },

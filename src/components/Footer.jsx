@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import BrandLogo from "./BrandLogo.jsx";
 import { mainNav } from "../data/navigation.js";
 import { springSoft } from "../motion/variants.js";
 
@@ -8,28 +8,10 @@ export default function Footer() {
   const reduce = useReducedMotion();
 
   return (
-    <motion.footer
-      className="w-full border-t border-outline bg-surface-container-high py-14 md:py-16"
-      initial={reduce ? false : { opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
-    >
+    <footer className="gsap-reveal-block w-full border-t border-outline bg-surface-container-high py-14 md:py-16">
       <div className="mx-auto flex max-w-container-max flex-col items-start justify-between gap-12 px-margin-mobile md:flex-row md:px-margin-desktop">
         <div className="max-w-md space-y-5">
-          <div className="flex items-center gap-3">
-            <motion.span
-              className="text-primary"
-              aria-hidden="true"
-              whileHover={reduce ? {} : { rotate: 12, scale: 1.08 }}
-              transition={springSoft}
-            >
-              <Sparkles className="h-7 w-7" strokeWidth={1.75} />
-            </motion.span>
-            <span className="font-headline-lg text-lg font-bold uppercase tracking-widest text-primary">
-              Vector Studios AI
-            </span>
-          </div>
+          <BrandLogo size="lg" titleCase />
           <p className="font-body-md text-sm leading-relaxed text-on-surface-variant">
             Desarrollo de apps y webs con agentes de IA integrados. Código y datos tuyos; texto y voz con identidad de tu marca.
           </p>
@@ -67,6 +49,6 @@ export default function Footer() {
           </div>
         </nav>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
