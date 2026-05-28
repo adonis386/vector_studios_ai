@@ -21,11 +21,17 @@ export default function SectionTitle({
       <h2 className="title-display text-primary-deep">
         {titleAccent != null ? (
           <>
-            <span className="gsap-split-words block">{title}</span>
-            <span className="gsap-split-words mt-1 block text-secondary md:mt-2">{titleAccent}</span>
+            <span className="gsap-split-words block overflow-hidden px-1 pb-1 md:overflow-visible md:px-0 md:pb-0">
+              {title}
+            </span>
+            <span className="gsap-split-words mt-1 block overflow-hidden px-1 pb-1 text-secondary md:mt-2 md:overflow-visible md:px-0 md:pb-0">
+              {titleAccent}
+            </span>
           </>
         ) : (
-          <span className="gsap-split-words block">{title}</span>
+          <span className="gsap-split-words block overflow-hidden px-1 pb-1 md:overflow-visible md:px-0 md:pb-0">
+            {title}
+          </span>
         )}
       </h2>
 

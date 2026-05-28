@@ -1,5 +1,6 @@
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
+import ProductoShowcase from "./components/ProductoShowcase.jsx";
 import Servicios from "./components/Servicios.jsx";
 import DemoVozAgente from "./components/DemoVozAgente.jsx";
 import DiferenciaVector from "./components/DiferenciaVector.jsx";
@@ -18,10 +19,11 @@ export default function App() {
       <div className="site-shell">
         <main id="inicio">
           <Hero />
+          <ProductoShowcase />
           <Servicios />
           <DemoVozAgente />
           <DiferenciaVector />
-          
+          <Cotiza />
           <Contacto />
         </main>
         <Footer />

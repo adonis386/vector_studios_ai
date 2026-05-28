@@ -1,56 +1,99 @@
 /**
- * Referencia interna (USD) — no se muestra en la landing.
- * La web usa la sección Cotiza (#cotiza). Ver docs/MODELO-DE-NEGOCIO v2.0.
+ * Planes públicos en #cotiza — una sola sección, 3 rutas + Plus IA.
+ * Integraciones, landings puntuales y alcances menores: solo en diagnóstico.
  */
+
 export const preciosIntro = {
-  eyebrow: "Planes de inversión",
-  titulo: "Elige el alcance según tu etapa",
-  lead: "Montos en USD. En el diagnóstico afinamos integraciones, volumen de conversaciones y si necesitas app móvil además de web.",
+  titulo: "Inversión de referencia",
+  tituloAccent: "tres rutas, un diagnóstico",
+  lead: "Precios desde en USD, alineados al mercado regional en web y competitivos en producto móvil. Plus IA e integraciones se cotizan en diagnóstico según alcance.",
+  nota: "Los montos finales dependen del alcance acordado. Uso de APIs de conversación y voz con topes en contrato. Código y datos en cuentas de su organización.",
+  pie: "También disponible: web esencial desde $499, App MVP desde $3,200, app operativa interna y programa Ecosistema multi-fase desde $2,500. Integraciones CRM, pagos e inventario según alcance.",
 };
 
+/** Tres planes principales — única grilla de la landing */
 export const preciosPlanes = [
   {
-    id: "smart-connect",
-    nombre: "Entrada",
-    etiqueta: "Web + IA en texto",
-    ideal: "Negocios que quieren presencia profesional y atención automatizada sin app móvil aún.",
-    desarrollo:
-      "Sitio o landing de alto rendimiento (5–7 secciones) + asistente de IA en texto (WhatsApp y/o chat web).",
-    estrategia: "Canal oficial, guiones del asistente y hasta 1 integración simple (CRM, hoja o webhook).",
-    diferencial: "Entrada al ecosistema: vendes y respondes fuera del horario (~500 conversaciones/mes incluidas en alcance base).",
-    inversion: "$1,400 – $1,800 (setup) + $199 – $249/mes (mantenimiento, ajustes y soporte ~2 h).",
+    id: "negocio",
+    nombre: "Negocio",
+    etiqueta: "Plataforma web",
+    ideal: "Sitio corporativo que opera: catálogo, reservas o captación diaria. Sin agente IA incluido.",
+    setupDesde: 799,
+    mensualDesde: 109,
+    incluye: [
+      "Sitio a medida y panel o CMS acordado",
+      "Mobile-first, SEO básico y analítica",
+      "Formularios, catálogo o reservas",
+      "Código en su cuenta de nube",
+      "Base para sumar app móvil o Plus IA",
+    ],
     destacado: false,
     badge: null,
-    cta: "Comenzar con Entrada",
+    cta: "Cotizar web",
     ctaVariant: "outline",
+    sinIa: true,
   },
   {
-    id: "voice-identity",
-    nombre: "Voice Identity",
-    etiqueta: "Recomendado · texto + voz",
-    ideal: "Marcas que quieren diferenciarse con voz propia y mayor tasa de cierre.",
-    desarrollo: "Todo Entrada + agente con notas de voz e identidad verbal de marca.",
-    estrategia: "Diseño de voz, guiones de venta y pruebas en WhatsApp y web; minutos de voz/mes acotados.",
-    diferencial: "Tu negocio se escucha como humano, no como un chatbot de plantilla.",
-    inversion: "$2,500 – $3,500 (setup) + $349 – $449/mes (mantenimiento e infraestructura de voz).",
+    id: "app-plataforma",
+    nombre: "App + Plataforma",
+    etiqueta: "Especialidad Vector",
+    ideal: "Ecosistema unificado: aplicación iOS/Android, web y panel con la misma base de datos.",
+    setupDesde: 4800,
+    mensualDesde: 249,
+    incluye: [
+      "App móvil + web + panel administrativo",
+      "Roles cliente, operador y administrador",
+      "Backend en nube y sincronización en tiempo real",
+      "Preparado para Plus IA in-app y WhatsApp",
+      "Hasta 2 integraciones en alcance inicial",
+    ],
     destacado: true,
     badge: "Recomendado",
-    cta: "Quiero Voice Identity",
+    cta: "Cotizar app y plataforma",
     ctaVariant: "primary",
   },
   {
-    id: "full-ecosystem",
-    nombre: "Completo",
-    etiqueta: "Producto digital por fases",
-    ideal: "Empresas que necesitan app móvil, web corporativa e IA en todos los canales.",
-    desarrollo:
-      "Fase 1: web + panel + agentes texto/voz y arquitectura para crecer. Fases 2–3: app móvil e integraciones (inventario, pagos, ERP).",
-    estrategia: "Retainer de desarrollo, lanzamiento por fases y soporte técnico prioritario.",
-    diferencial: "Un solo cerebro de IA para app, web y WhatsApp; propiedad técnica clara.",
-    inversion: "$4,500 (Fase 1) + cotización fases siguientes · $599 – $999/mes (retainer dev y soporte).",
+    id: "ecosistema",
+    nombre: "Ecosistema",
+    etiqueta: "A medida",
+    ideal: "Programa por fases: integraciones corporativas, app, web e IA en todos los canales.",
+    setupDesde: 2500,
+    mensualDesde: 399,
+    incluye: [
+      "Alcance y cronograma por fases documentados",
+      "CRM, pagos, inventario o ERP según diagnóstico",
+      "Un equipo para producto e inteligencia artificial",
+      "Propiedad técnica y roadmap evolutivo",
+      "Retainer de desarrollo y soporte prioritario",
+    ],
     destacado: false,
     badge: null,
-    cta: "Solicitar ecosistema completo",
+    cta: "Solicitar ecosistema",
     ctaVariant: "outline",
+    faseNota: "Inversión inicial según Fase 1 acordada",
   },
 ];
+
+/** Plus IA — una franja, no tres tarjetas */
+export const preciosPlusIa = {
+  titulo: "Plus IA",
+  subtitulo: "Capa opcional sobre web o app",
+  lead: "Agentes de texto y voz integrados en WhatsApp, web y aplicación móvil. Diseño conversacional e identidad de marca, no chatbot genérico.",
+  opciones: [
+    {
+      id: "texto",
+      nombre: "Agente de texto",
+      setupDesde: 599,
+      mensualDesde: 139,
+      detalle: "WhatsApp, chat web e in-app. Guiones, topes de conversación e integración operativa.",
+    },
+    {
+      id: "completo",
+      nombre: "Texto + voz de marca",
+      setupDesde: 1550,
+      mensualDesde: 279,
+      detalle: "Un cerebro multi-canal con notas de voz e identidad verbal acordada en contrato.",
+    },
+  ],
+  cta: "Consultar Plus IA",
+};

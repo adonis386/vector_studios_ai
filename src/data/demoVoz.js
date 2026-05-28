@@ -1,29 +1,31 @@
 export const demoVozIntro = {
-  eyebrow: "Prueba en vivo",
-  titulo: "¡Así funciona nuestro",
-  tituloAccent: "agente de voz!",
+  eyebrow: "Demostración en vivo",
+  titulo: "Agente de voz",
+  tituloAccent: "integrado a producto digital",
   lead:
-    "Habla con Vector ahora mismo: el mismo tipo de asistente que integramos en tus apps y webs. Sin registro — solo pulsa el widget en la esquina inferior derecha.",
-  hint: "Widget activo en esta página",
+    "Interaccione con el asistente de voz configurado para Vector Studios. Es el mismo tipo de capacidad que integramos en aplicaciones móviles, plataformas web y canales de mensajería.",
+  hint: "Asistente activo en esta página",
+  calloutTitle: "Demostración activa",
+  calloutText:
+    "Instancia de referencia del agente de voz que desplegamos en productos digitales. Misma línea de implementación para aplicaciones móviles y canales web.",
+  pointerLine1: "Acceso al asistente",
+  pointerLine2: "esquina inferior derecha",
 };
 
 export const demoVozPasos = [
   {
     id: "ubicar",
-    n: "01",
-    titulo: "Ubica el asistente",
-    texto: "En la esquina inferior derecha verás el botón flotante del asistente.",
+    titulo: "Localice el asistente",
+    texto: "En la esquina inferior derecha encontrará el acceso al agente de voz.",
   },
   {
     id: "iniciar",
-    n: "02",
-    titulo: "Inicia la llamada",
-    texto: "Pulsa y concede acceso al micrófono cuando el navegador lo pida.",
+    titulo: "Inicie la conversación",
+    texto: "Autorice el micrófono cuando el navegador lo solicite.",
   },
   {
     id: "probar",
-    n: "03",
-    titulo: "Pregunta lo que quieras",
-    texto: "Servicios, alcance, plazos o cómo sería tu proyecto con IA de voz.",
+    titulo: "Consulte alcance y servicios",
+    texto: "Pregunte por capacidades, plazos, integraciones o arquitectura de su proyecto.",
   },
 ];

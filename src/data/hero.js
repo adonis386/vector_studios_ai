@@ -1,15 +1,10 @@
-/** Hero — mensaje principal (desarrollo + IA) */
+/** Hero — mensaje principal corporativo */
 export const heroContent = {
-  badge: "Apps, webs e IA en un solo equipo",
-  titleLine1: "Apps y webs que venden",
-  titleAccent: "y atienden solas",
+  badge: "Desarrollo de producto digital",
+  titleLine1: "Apps móviles y plataformas web",
+  titleAccent: "con inteligencia artificial",
   description:
-    "Desarrollamos aplicaciones móviles y plataformas web con infraestructura en la nube, datos en tiempo real y agentes de inteligencia artificial integrados. La IA no es un parche: responde por WhatsApp, en tu app o en la web, con código y datos bajo tu control.",
+    "Desarrollamos aplicaciones iOS y Android y software web con infraestructura en la nube. Los agentes de texto y voz se integran en su producto, con código y datos bajo control de su organización.",
   ctaPrimary: { label: "Solicitar diagnóstico", href: "#contacto" },
-  ctaSecondary: { label: "Cotiza con nosotros", href: "#cotiza" },
-  statusLines: [
-    { key: "dev", text: "DESARROLLO: APP + WEB" },
-    { key: "ia", text: "AGENTE: TEXTO Y VOZ" },
-    { key: "data", text: "DATOS: TIEMPO REAL" },
-  ],
+  ctaSecondary: { label: "Ver planes", href: "#cotiza" },
 };

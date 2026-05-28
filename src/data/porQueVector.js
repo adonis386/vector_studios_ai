@@ -1,32 +1,34 @@
-import { Code2, Gem, Megaphone, Percent } from "lucide-react";
+import { Code2, Gem, Megaphone, Percent, Smartphone } from "lucide-react";
 
 export const porQueIntro = {
-  titulo: "Desarrollo propio, no alquiler de un SaaS cerrado",
-  leadBefore: "Muchas herramientas cobran por mensaje y retienen tus datos. En Vector Studios AI construimos ",
+  titulo: "Ingeniería de producto, no suscripción genérica",
+  leadBefore: "Las plataformas cerradas retienen datos y escalan costos por uso. En Vector Studios AI entregamos ",
   leadEmphasis: "activos digitales",
   leadAfter:
-    ": apps y webs con IA integrada, código y base de datos que puedes hacer crecer sin depender de una plataforma genérica.",
+    ": aplicaciones móviles, software web e inteligencia artificial con código, repositorio e infraestructura bajo su control.",
 };
 
 export const porQuePilares = [
   {
-    id: "comisiones",
-    Icon: Percent,
-    titulo: "Costos transparentes",
-    texto: "Pagas el desarrollo, el mantenimiento y el uso real de las APIs de conversación y voz — sin comisiones ocultas por mensaje.",
+    id: "apps",
+    Icon: Smartphone,
+    titulo: "Apps móviles como especialidad",
+    texto:
+      "Desde el MVP en tiendas hasta ecosistemas app + web + panel. Misma base de datos, reglas de negocio unificadas y camino claro para sumar IA y voz dentro de la aplicación.",
   },
   {
     id: "propiedad",
     Icon: Gem,
-    titulo: "Código y datos tuyos",
-    texto: "El producto vive en tu cuenta de nube y repositorio. No quedas encerrado en un panel de terceros que puede subir precios o limitar funciones.",
+    titulo: "Propiedad técnica",
+    texto:
+      "El producto se despliega en su cuenta de nube y repositorio. Sin dependencia de un panel de terceros que limite funciones o modifique condiciones unilateralmente.",
   },
   {
     id: "ingenieria",
     Icon: Code2,
-    titulo: "Ingeniería + conversación",
+    titulo: "Producto e inteligencia artificial",
     texto:
-      "No solo programamos: diseñamos guiones, identidad verbal y flujos de venta para que la IA suene como tu marca, no como un bot de plantilla.",
+      "Desarrollo de software y diseño conversacional en un mismo equipo: guiones, identidad verbal y arquitectura lista para texto y voz en app, web y WhatsApp.",
     IconSecondary: Megaphone,
   },
 ];

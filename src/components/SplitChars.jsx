@@ -1,14 +1,25 @@
-/** Divide texto en caracteres para animación GSAP (estilo homepage gsap.com) */
+/** Caracteres animables por palabra (evita cortes tipo "platafo| rmas") */
 export default function SplitChars({ text, className = "" }) {
+  const words = text.trim().split(/\s+/).filter(Boolean);
+
   return (
     <>
-      {text.split("").map((char, i) => (
+      {words.map((word, wordIndex) => (
         <span
-          key={`${char}-${i}`}
-          className={`gsap-char inline-block ${className}`}
-          aria-hidden="true"
+          key={`${word}-${wordIndex}`}
+          className={`hero-word inline-block whitespace-nowrap ${
+            wordIndex < words.length - 1 ? "mr-[0.3em]" : ""
+          }`}
         >
-          {char === " " ? "\u00A0" : char}
+          {word.split("").map((char, charIndex) => (
+            <span
+              key={`${char}-${charIndex}`}
+              className={`gsap-char inline-block ${className}`}
+              aria-hidden="true"
+            >
+              {char}
+            </span>
+          ))}
         </span>
       ))}
     </>
